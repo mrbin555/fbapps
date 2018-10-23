@@ -61,23 +61,7 @@ function CReact(arr_type_react, pid, access_token, user) {
     var type_react = arr_type_react[Math.floor(Math.random() * arr_type_react.length)]
     console.log('https://graph.facebook.com/v3.1/' + pid + '/reactions?access_token=' + access_token,user['uid'])
     var data = 'debug=all&format=json&method=post&pretty=0&suppress_http_code=1&type=' + type_react
-    request({
-        headers: {
-            'accept': '*/*',
-            'accept-encoding': 'gzip, deflate, br',
-            'accept-language': 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5',
-            'content-type': 'application/x-www-form-urlencoded',
-            'origin': 'https://developers.facebook.com',
-            'referer': 'https://developers.facebook.com/',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
-            'content-length': data.length,
-        },
-        uri: 'https://graph.facebook.com/v3.1/' + pid + '/reactions?access_token=' + access_token,
-        body: data,
-        method: 'POST'
-    }, function(err, res, body) {
-        console.log(body,user['uid'])
-    });
+    
 }
 
 function BComment(param, pid, access_token, user) {
