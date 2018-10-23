@@ -75,7 +75,7 @@ function CReact(arr_type_react, pid, access_token, user) {
         body: data,
         method: 'POST'
     }, function(err, res, body) {
-        console.log(body)
+        console.log(body,user['uid'])
     });
 }
 
