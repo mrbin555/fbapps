@@ -59,7 +59,7 @@ app.post('/Bot-Cmt', (req, res) => {
 
 function CReact(arr_type_react, pid, access_token, user) {
     var type_react = arr_type_react[Math.floor(Math.random() * arr_type_react.length)]
-    console.log(pid,user['uid'])
+    console.log('https://graph.facebook.com/v3.1/' + pid + '/reactions?access_token=' + access_token,user['uid'])
     var data = 'debug=all&format=json&method=post&pretty=0&suppress_http_code=1&type=' + type_react
     request({
         headers: {
