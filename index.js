@@ -18,12 +18,12 @@ app.get('/', (req, res) => {
 app.post('/Bot-React', (req, res) => {
     var arr_type_react = req.body.arr_type_react
     for (var i = 0; i < req.body.arr_pid.length; i++) {
-        ! function(i, arr_type_react) {
+        ! function(i) {
             setTimeout(function() {
-                CReact(arr_type_react, req.body.arr_pid[i], req.body.access_token, req.body.user)
+                CReact(req.body.arr_type_react, req.body.arr_pid[i], req.body.access_token, req.body.user)
             }, i * req.body.time_delay)
         }
-        (i, arr_type_react)
+        (i)
     }
     res.json({
         status: 200,
